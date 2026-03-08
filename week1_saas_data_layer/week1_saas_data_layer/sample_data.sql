@@ -1,0 +1,12 @@
+INSERT INTO tenants VALUES
+('11111111-1111-1111-1111-111111111111','tenant_A',NOW());
+
+INSERT INTO users VALUES
+('22222222-2222-2222-2222-222222222222',
+'11111111-1111-1111-1111-111111111111',
+'hari_user');
+
+INSERT INTO roles (role_name) VALUES
+('admin'),
+('reviewer'),
+('viewer');
