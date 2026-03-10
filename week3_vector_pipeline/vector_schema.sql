@@ -8,4 +8,4 @@ CREATE TABLE document_embeddings (
     document_id TEXT,
     document_text TEXT,
     embedding VECTOR(1536)
-);
+);git

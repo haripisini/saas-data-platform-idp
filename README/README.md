@@ -73,5 +73,99 @@ To build the foundational backend architecture required for a scalable SaaS data
 
 ---
 
-Author  
-Hari Pisini
+A# Week 3 – Vector & Embedding Pipeline
+
+This stage focuses on understanding how semantic search works using vector embeddings.
+
+## Objective
+
+The goal of this week was to experiment with embedding generation and basic vector search to understand how document retrieval works in modern AI systems.
+
+## Components Implemented
+
+### 1. Embedding Schema
+
+A PostgreSQL schema was designed to store document embeddings using the pgvector extension.
+
+File:
+vector_schema.sql
+
+Key fields:
+- document_id
+- document_text
+- embedding vector
+
+### 2. Vector Search Experiment
+
+A small Python script was created to experiment with vector similarity search.
+
+File:
+vector_search.py
+
+Steps performed:
+1. Load a sentence transformer model
+2. Convert documents into embeddings
+3. Store embeddings in memory
+4. Perform similarity search using a query
+5. Return the most relevant document
+
+### Example Flow
+
+## Learning Outcome
+
+This experiment helped understand how vector embeddings are generated and how semantic retrieval works in retrieval-based AI systems.# Week 4 – Data Quality & Governance
+
+This stage focuses on improving reliability, validation, and governance for the data pipeline.
+
+## Objective
+
+Ensure that the ingestion and vector processing pipelines produce clean, validated, and traceable data.
+
+## Components Implemented
+
+### 1. Entity Relationship Modeling
+
+Created relational models for:
+
+- tenants
+- documents
+- embeddings
+- audit logs
+
+File:
+er_model.sql
+
+The schema ensures referential integrity between tenants, documents, and embeddings.
+
+---
+
+### 2. Data Validation
+
+Implemented a simple validation framework to detect invalid or empty documents before processing.
+
+File:
+data_validation.py
+
+Validation checks include:
+
+- empty document detection
+- filtering invalid records
+
+---
+
+### 3. Compliance Simulation
+
+Simulated a basic data erasure request to demonstrate tenant-level compliance handling.
+
+File:
+compliance_simulation.py
+
+Example scenario:
+
+---
+
+## Learning Outcome
+
+This stage helps understand the importance of data quality, governance, and compliance in production data platforms.
+
+These checks ensure that ingestion pipelines maintain reliable and auditable data.
